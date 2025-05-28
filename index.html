@@ -1,12 +1,82 @@
-<!DOCTYPE html>
-<html>
+ni el<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <title>Página Estética con Contador de Visitas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url(https://elcomercio.pe/resizer/v2/6Y2EDIISGFGVFANEVDCR5LCG34.jpg?auth=f58b5c647a09717054d85bb8b9a6bc624bfcb14fe9c60b5246730ea6a513e2b0&width=1200&height=810&quality=90&smart=true);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #fff;
+            backdrop-filter: blur(1.5px);
+        }
+        .container {
+            background: rgba(0,0,0,0.5);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.2rem;
+            letter-spacing: 1px;
+        }
+        #counter {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1.2rem 0;
+            color: #ffd700;
+            text-shadow: 1px 1px 2px #000, 0 0 25px #ffd700, 0 0 5px #ffd700;
+        }
+        .btn {
+            padding: 0.75rem 2.2rem;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+            color: #222;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            font-weight: 600;
+            text-shadow: 0 1px 5px #fff9;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #ffd200 0%, #f7971e 100%);
+            transform: scale(1.07);
+        }
+    </style>
 </head>
 <body>
-
-<h1>Mi primera pagina</h1>
-<p>Elizabeth suarez.</p>
-
+    <div class="container">
+        <h1>Bienvenido a la Página Estética</h1>
+        <div id="counter">Visitas: <span id="visits">0</span></div>
+        <button class="btn" onclick="window.location.href='pag 2.html'">Ir a otra página</button>
+    </div>
+    <script>
+        // Usar LocalStorage para contar visitas por usuario (no por servidor)
+        function updateVisitCounter() {
+            let visits = localStorage.getItem('visitCounter');
+            if (!visits) {
+                visits = 1;
+            } else {
+                visits = parseInt(visits, 10) + 1;
+            }
+            localStorage.setItem('visitCounter', visits);
+            document.getElementById('visits').textContent = visits;
+        }
+        updateVisitCounter();
 </body>
-</html>
+</html
+    audio controls src="electrónica.mp3"></audio>
